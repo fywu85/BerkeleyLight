@@ -1,9 +1,6 @@
-# MathDept
-Beamer theme for the Department of Mathematics at the University of Oslo
-
-Available on [Overleaf](https://www.overleaf.com/latex/templates/uio-math-department-beamer-theme/zywjpxdgmpzf).
-
-![Image of first slide](https://i.imgur.com/ckfzelX.png)
+# BerkeleyLight
+Beamer theme made for academic presentation with a light blue colorset.
+The theme is adapted from the MathDept theme authored by Martin Helsø.
 
 ## Section page
 The command `\SectionPage` inserts a `[NoFrameNumbering, plain]` frame
