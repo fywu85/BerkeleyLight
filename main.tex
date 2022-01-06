@@ -1,7 +1,10 @@
-\documentclass[UKenglish]{beamer}
+% https://github.com/martinhelso/MathDept
 
 
-\usetheme[NoLogo]{MathDept}
+\documentclass[english,MathSerif,aspectratio=169]{beamer}
+
+
+\usetheme[NoLogo,NoFinalFrame]{BerkeleyLight}
 
 
 \usepackage[utf8]{inputenx} % For æ, ø, å
@@ -16,10 +19,9 @@
 \usepackage{tikz}
 \usetikzlibrary{overlay-beamer-styles}  % Overlay effects for TikZ
 
-
-\author{Martin Helsø}
-\title{Beamer example}
-\subtitle{Usage of the theme \texttt{MathDept}}
+\author{John Smith}
+\title{Title of the Presentation}
+\subtitle{Subtitle of the Presentation}
 
 
 \begin{document}
@@ -46,7 +48,7 @@
     \begin{theorem}[Fermat's little theorem]
         For a prime~\(p\) and \(a \in \mathbb{Z}\) it holds that \(a^p \equiv a \pmod{p}\).
     \end{theorem}
-    
+
     \begin{proof}
         The invertible elements in a field form a group under multiplication.
         In particular, the elements
@@ -82,11 +84,11 @@
 
 \begin{frame}{Highlighting}
     Some times it is useful to \alert{highlight} certain words in the text.
-    
+
     \begin{alertblock}{Important message}
         If a lot of text should be \alert{highlighted}, it is a good idea to put it in a box.
     \end{alertblock}
-    
+
     It is easy to match the \structure{colour theme}.
 \end{frame}
 
@@ -99,7 +101,7 @@
         \item
         Bullet lists are marked with a grey box.
     \end{itemize}
-    
+
     \begin{enumerate}
         \item
         \label{enum:item}
@@ -123,6 +125,7 @@
 
 
 \section{Effects}
+
 
 
 \begin{frame}{Effects}
@@ -155,10 +158,6 @@
             (here x is a percentage of width and y a percentage of height).
         \end{column}
     \end{columns}
-    
-    \begin{textblock}{0.3}(0.45, 0.55)
-        \includegraphics<1, 3>[width = \textwidth]{MathDept-images/MathDept-apollon}
-    \end{textblock}
 \end{frame}
 
 

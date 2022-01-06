@@ -1,6 +1,8 @@
-% Official presentation theme for the Department of Mathematics
-% Implemented by Martin Helsø (martibhe@math.uio.no)
-% Version 10-08-2020
+% Academic presentation theme adapted from the beamer template made for
+% the Department of Mathematics at the University of Oslo available at
+% https://github.com/martinhelso/MathDept
+
+% Adaptation is implemented by Fangyu Wu (fangyuwu@berkeley.edu)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,7 +183,8 @@
 %% Theme-specific colours:
 \definecolor{alertblock}{cmyk}{0, 1, 1, 0.2}
 \definecolor{blockbody} {cmyk}{0, 0, 0, 0.2}
-\definecolor{colortheme}{cmyk}{0, 0, 0, 0.7}
+\definecolor{colortheme}{RGB}{11, 83, 148}
+\definecolor{lightcolortheme}{RGB}{37, 150, 190}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -209,15 +212,15 @@
                              bg = structure}
 \setbeamercolor{block body} {bg = blockbody}
 \setbeamercolor{block title example}{fg = white,
-                                     bg = black}
+                                     bg = lightcolortheme}
 \setbeamercolor{block body example} {bg = blockbody}
 \setbeamercolor{block title alerted}{fg = white,
                                      bg = alertblock}
 \setbeamercolor{block body alerted} {bg = blockbody}
 \setbeamercolor{alerted text} {fg = uiored}
 \setbeamercolor{footnote mark}{fg = uiored}
-\setbeamercolor{section in head/foot}{fg = white,
-                                      bg = black}
+\setbeamercolor{section in head/foot}{fg = colortheme,
+                                      bg = white}
 \setbeamercolor{section in toc}{fg = black}
 \setbeamercolor{bibliography entry location}{fg = structure}
 
@@ -226,16 +229,16 @@
 \setbeamercolor{author in final frame}  {fg = white}
 \setbeamercolor{title in final frame}   {fg = white}
 \setbeamercolor{subtitle in final frame}{fg = white}
-\setbeamercolor*{section page}{fg = black, bg = blockbody}
+\setbeamercolor*{section page}{fg = colortheme, bg = white}
 
 
 %% Standard fonts:
 \setbeamerfont{author}    {size   = \large,
                            series = \normalfont\bfseries}
-\setbeamerfont{title}     {size   = \LARGE,
+\setbeamerfont{title}     {size   = \Huge,
                            series = \bfseries}
-\setbeamerfont{subtitle}  {size   = \large,
-                           series = \normalfont\rmfamily}
+\setbeamerfont{subtitle}  {size   = \huge,
+                           series = \normalfont\bfseries}
 \setbeamerfont{date}      {size   = \large,
                            series = \bfseries}
 \setbeamerfont{frametitle}{size = \LARGE,
@@ -252,7 +255,7 @@
 \setbeamerfont{title in final frame}   {size   = \LARGE,
                                         series = \bfseries}
 \setbeamerfont{subtitle in final frame}{  size = \Large,
-                                        series = \normalfont\rmfamily}
+                                        series = \normalfont\bfseries}
 \setbeamerfont*{section page}{size   = \Huge,
                               series = \bfseries}
 
@@ -265,46 +268,28 @@
     {
         \AtPageUpperLeft
         {
-            \hspace{1.7 mm}
-            \parbox[t][3.3cm][b]{\textwidth}
-            {
-                \includegraphics[width = \textwidth]
-                {MathDept-images/MathDept-angel}
-            }
-        }
-
-        \AtPageUpperLeft
-        {
-            \hspace{1.7 mm}
-            \parbox[t][4.8cm][b]{\textwidth}
-            {
-                \includegraphics[scale = 0.3]
-                {MathDept-images/MathDept-logo-1-\MATHlang}
+            \parbox[t][8.5 cm][b]{\textwidth}
+            {   \raggedleft
+                \includegraphics[scale = 0.02]
+                {images/berkeley_logo}
             }
         }
     }
 
     \vbox to \textheight
     {
-        \vspace{52 mm}
-
-        \leftskip  = 1.2365 cm
-        \rightskip = 1.2365 cm plus 2 cm
+        \vspace{10 mm}
+        \tikz \fill [colortheme] (0.0, 0.0) rectangle (0.15, 0.8);
+        \tikz \fill [lightcolortheme] (0.0, 0.0) rectangle (0.15, 0.8);
 
         \usebeamerfont{title}    \structure{\inserttitle}
         \\[0.2ex]
-        \usebeamerfont{subtitle} \structure{\insertsubtitle}
+        \usebeamerfont{subtitle} \textcolor{lightcolortheme}{\insertsubtitle}
 
-        \vfill
+        \vspace{5 mm}
 
-        \usebeamerfont{author} \insertauthor
-        \hfill
-        \newlength{\datewidth}
-        \settowidth{\datewidth}{\insertdate}
-        \parbox{\datewidth}
-        {
-            \usebeamerfont{date} \insertdate
-        }
+        \usebeamerfont{author} \textcolor{black}{\insertauthor}\\
+        \usebeamerfont{date} \textcolor{black}{\insertdate}\\
     }
 }
 
@@ -332,27 +317,6 @@
 
             \AddToShipoutPictureFG*
             {
-
-                \AtPageUpperLeft
-                {
-                    \hspace{0.976\radius}
-                    \parbox[t][0.2\paperheight][b]{\textwidth}
-                    {
-                        \includegraphics[scale = 0.4]
-                        {MathDept-images/MathDept-logo-3-\MATHlang}
-                    }
-                }
-
-                \AtPageLowerLeft
-                {
-                    \hspace{2\radius}
-                    \parbox[b][4\radius][t]{2\radius}
-                    {
-                        \includegraphics[width = 2\radius]
-                        {MathDept-images/MathDept-apollon}
-                    }
-                }
-
                 \AtPageLowerLeft
                 {
                     \hspace{2\radius}
@@ -440,7 +404,7 @@
                 \parbox[t][0.9 cm][b]{\textwidth}
                 {
                     \includegraphics[scale = 0.2]
-                    {MathDept-images/MathDept-logo-2-\MATHlang}
+                    {images/MathDept-logo-2-\MATHlang}
                 }
             }
         }
@@ -463,15 +427,7 @@
                               {section in head/foot}
 
                 \hspace*{3.845mm}
-                \usebeamerfont{author in head/foot}
-                \insertshortauthor
                 \hfill
-                \usebeamerfont{title in head/foot}
-                \insertshorttitle
-                \hfill
-                \usebeamerfont{date in head/foot}
-                \insertshortdate
-                \hspace*{2em}
                 \insertframenumber{} / \inserttotalframenumber
                 \hspace*{3.845mm}
         \end{beamercolorbox}
